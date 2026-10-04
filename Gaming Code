@@ -1,0 +1,157 @@
+// 1. Number guessing game:
+import random
+
+number = random.randint(1, 10)
+
+guess = int(input("Guess a number between 1 and 10: "))
+
+if guess == number:
+    print("You Win!")
+else:
+    print("You Lose! The number was", number)
+
+// 2. Rock, paper and scissors:
+import random
+
+choices = ["rock", "paper", "scissors"]
+
+computer = random.choice(choices)
+player = input("Enter rock, paper or scissors: ").lower()
+
+print("Computer chose:", computer)
+
+if player == computer:
+    print("It's a Tie!")
+elif (player == "rock" and computer == "scissors") or \
+     (player == "paper" and computer == "rock") or \
+     (player == "scissors" and computer == "paper"):
+    print("You Win!")
+else:
+    print("You Lose!")
+
+// 3. Dice rolling game:
+import random
+
+dice = random.randint(1, 6)
+
+print("You rolled:", dice)
+
+// 4. Coin toss game:
+import random
+
+coin = random.choice(["Heads", "Tails"])
+
+guess = input("Choose Heads or Tails: ")
+
+if guess.lower() == coin.lower():
+    print("You Win!")
+else:
+    print("You Lose!")
+
+print("Coin was:", coin)
+
+// 5. Simple quiz game:
+score = 0
+answer = input("What is the capital of India? ")
+
+if answer.lower() == "delhi":
+    print("Correct!")
+    score += 1
+else:
+    print("Wrong!")
+
+print("Your score is:", score)
+
+//6. Even and odd game:
+import random
+
+number = random.randint(1, 20)
+
+guess = input("Is the number Even or Odd? ")
+
+if number % 2 == 0:
+    correct = "even"
+else:
+    correct = "odd"
+
+if guess.lower() == correct:
+    print("Correct! Number was", number)
+else:
+    print("Wrong! Number was", number)
+
+// 7. Password guessing game:
+import random
+
+number = random.randint(1, 20)
+
+guess = input("Is the number Even or Odd? ")
+
+if number % 2 == 0:
+    correct = "even"
+else:
+    correct = "odd"
+
+if guess.lower() == correct:
+    print("Correct! Number was", number)
+else:
+    print("Wrong! Number was", number)
+
+// 8. Lucky number game:
+import random
+lucky = random.randint(1, 50)
+
+guess = int(input("Guess your lucky number (1-50): "))
+if guess == lucky:
+    print("Congratulations! You won!")
+else:
+    print("Try again!")
+    print("Lucky number was:", lucky)
+
+// 9. Math quiz game:
+import random
+a = random.randint(1, 10)
+b = random.randint(1, 10)
+
+answer = int(input(f"What is {a} + {b}? "))
+
+if answer == a + b:
+    print("Correct! You Win!")
+else:
+    print("Wrong! Correct answer is", a + b)
+
+// 10. Rock, paper and scissors with score:
+import random
+
+player_score = 0
+computer_score = 0
+
+for i in range(3):
+    choices = ["rock", "paper", "scissors"]
+
+    player = input("Enter rock, paper or scissors: ").lower()
+    computer = random.choice(choices)
+
+    print("Computer:", computer)
+
+    if player == computer:
+        print("Tie!")
+    elif (player == "rock" and computer == "scissors") or \
+         (player == "paper" and computer == "rock") or \
+         (player == "scissors" and computer == "paper"):
+        print("You win this round!")
+        player_score += 1
+    else:
+        print("Computer wins this round!")
+        computer_score += 1
+
+print("\nFinal Score")
+print("You:", player_score)
+print("Computer:", computer_score)
+
+if player_score > computer_score:
+    print("You Win the Game!")
+elif player_score < computer_score:
+    print("Computer Wins!")
+else:
+    print("Game Tie!")
+
